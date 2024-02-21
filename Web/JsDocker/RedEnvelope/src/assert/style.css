@@ -1,0 +1,79 @@
+body {
+    background-color: #fedfe1;
+    color: #b0171f;
+    /*艺术字体*/
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    padding-top: 20%;
+    overflow: hidden;
+    position: relative;
+}
+
+h1 {
+    font-size: 5em;
+    display: inline-block;
+    position: relative;
+    animation: wave 1s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+    from {
+        transform: rotate(2deg);
+    }
+    to {
+        transform: rotate(-2deg);
+    }
+}
+
+.flake {
+    position: absolute;
+    top: 0;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+/*按钮样式*/
+.Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    margin-top: -350px;
+    transform: scale(1.5);
+}
+.Button p {
+    margin: 0;
+}
+
+
+.in {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

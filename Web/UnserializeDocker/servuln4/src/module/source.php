@@ -6,7 +6,7 @@ class Cancer
 
     public function __destruct()
     {
-        echo "触发了魔术方法__destruct()\n";
+        printf("%s\n", __METHOD__);
         unserialize($this->key)();
     }
 }
@@ -18,6 +18,7 @@ class GetFlag
 
     public function create()
     {
+        printf("%s\n", __METHOD__);
         $a = $this->func;
         $a('', $this->code);
     }

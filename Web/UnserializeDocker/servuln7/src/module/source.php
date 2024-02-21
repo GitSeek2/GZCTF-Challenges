@@ -7,7 +7,7 @@ class Justice
 
     function __destruct()
     {
-        echo "触发了魔术方法__destruct()\n";
+        printf("%s\n", __METHOD__);
         $head = $this->head;
         $tail = $this->tail;
         $head->$tail();
@@ -20,7 +20,7 @@ class Libra
 
     function __call($func, $args)
     {
-        echo "触发了魔术方法__call()\n";
+        printf("%s\n", __METHOD__);
         if ($func === 'symbolize' and $this->name === 'balance') {
             echo file_get_contents('/flag');
         }

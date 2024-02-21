@@ -1,0 +1,58 @@
+/*进度条样式*/
+.progress {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #f3f3f3;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(-45deg, #3498db, #3498db 25%, #9b59b6 25%, #9b59b6 50%, #e74c3c 50%, #e74c3c 75%, #f1c40f 75%, #f1c40f);
+    background-size: 200% 100%;
+    animation: progress-bar-stripes 2s linear infinite;
+    position: relative;
+}
+
+.progress-bar-18 {
+    width: 18%;
+}
+
+.progress-bar-36 {
+    width: 36%;
+}
+
+.progress-bar-54 {
+    width: 54%;
+}
+
+.progress-bar-72 {
+    width: 72%;
+}
+
+.progress-bar-90 {
+    width: 90%;
+}
+
+.progress-bar-100 {
+    width: 100%;
+}
+
+.progress-value {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000;
+    font-weight: bold;
+}
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 200% 0;
+    }
+    to {
+        background-position: -200% 0;
+    }
+}

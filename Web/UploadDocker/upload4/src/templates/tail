@@ -1,0 +1,16 @@
+
+                    <div class="card-footer text-right">
+                        <button class="btn btn-dark " onclick="window.location.href='../index.php'">首页</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="py-4 bg-dark mt-5 mt-auto">
+    <div class="container">
+        <p class="m-0 text-center text-light">Copyright &copy; Sonder Blog 2024</p>
+    </div>
+</footer>
+</body>
+</html>

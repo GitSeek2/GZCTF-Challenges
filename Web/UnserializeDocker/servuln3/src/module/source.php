@@ -13,11 +13,12 @@ class Gemini
 
     function __destruct()
     {
-        echo "触发了魔术方法__destruct()\n";
+        printf("%s\n", __METHOD__);
         $this->login();
     }
     function login()
     {
+        printf("%s\n", __METHOD__);
         if ($this->id === "1317" and $this->user === "lutalica") {
             echo file_get_contents('/flag');
         }

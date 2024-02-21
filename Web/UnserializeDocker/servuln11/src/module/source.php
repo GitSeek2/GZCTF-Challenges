@@ -4,6 +4,7 @@ class Aquarius
 {
     public function __wakeup()
     {
+        printf("%s\n", __METHOD__);
         echo file_get_contents('/flag');
     }
 }
@@ -12,6 +13,7 @@ function Check($filename)
 {
     $mark = true;
     $black_list = ['php', 'file', 'glob', 'data', 'http', 'ftp', 'zip', 'https', 'ftps', 'phar'];
+    printf("%s\n", __METHOD__);
     foreach ($black_list as $item) {
         $front = substr($filename, 0, strlen($item));
         if ($front == $item) {

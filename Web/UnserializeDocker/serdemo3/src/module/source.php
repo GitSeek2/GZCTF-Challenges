@@ -6,11 +6,12 @@ class Modifier
     protected $var;
     public function append($value)
     {
+        printf("%s\n", __METHOD__);
         include($value);
     }
     public function __invoke()
     {
-        echo "触发了魔术方法__invoke()\n";
+        printf("%s\n", __METHOD__);
         $this->append($this->var);
     }
 }
@@ -26,13 +27,13 @@ class Show
     }
     public function __toString()
     {
-        echo "触发了魔术方法__toString()\n";
+        printf("%s\n", __METHOD__);
         return $this->str->source;
     }
 
     public function __wakeup()
     {
-        echo "触发了魔术方法__wakeup()\n";
+        printf("%s\n", __METHOD__);
         if (preg_match("/gopher|http|file|ftp|https|dict|\.\./i", $this->source)) {
             echo "系统检测到可疑字段，启动了查杀程序\n";
             $this->source = "index.php";
@@ -50,7 +51,7 @@ class Test
 
     public function __get($key)
     {
-        echo "触发了魔术方法__get()\n";
+        printf("%s\n", __METHOD__);
         $function = $this->p;
         return $function();
     }

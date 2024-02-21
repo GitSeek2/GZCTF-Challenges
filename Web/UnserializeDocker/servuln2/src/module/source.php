@@ -15,17 +15,18 @@ class Taurus
 
     function __destruct()
     {
-        echo "触发了魔术方法__destruct()\n";
+        printf("%s\n", __METHOD__);
         $this->register();
     }
 
     function register()
     {
+        printf("%s\n", __METHOD__);
         if ($this->user === "lutalica" && $this->pass === "P@ssw0rd" && $this->email === '231452327@ti.me') {
             echo file_get_contents('/flag');
         }
     }
-    
+
 }
 
 if (isset($_REQUEST['Taurus'])) {

@@ -1,0 +1,19 @@
+/*红包雨*/
+.red-envelope {
+    position: fixed;
+    top: 0;
+    width: 100px;  /* 原来的两倍 */
+    height: 140px; /* 原来的两倍 */
+    background-image: url('red-envelope.png');
+    background-size: cover;
+    animation: fadeIn 1s, fall linear;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh); }
+}

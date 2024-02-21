@@ -7,12 +7,14 @@ class Sagittarius
 
     public function append($value)
     {
+        printf("%s\n", __METHOD__);
         include($value);
         echo $flag;
     }
 
     public function __invoke()
     {
+        printf("%s\n", __METHOD__);
         echo "触发了魔术方法__invoke()\n";
         $this->append($this->arrow);
     }
@@ -25,13 +27,13 @@ class Guardian
 
     public function __toString()
     {
-        echo "触发了魔术方法__toString()\n";
+        printf("%s\n", __METHOD__);
         return $this->jupiter->zeus;
     }
 
     public function __wakeup()
     {
-        echo "触发了魔术方法__wakeup()\n";
+        printf("%s\n", __METHOD__);
         echo $this->zeus;
     }
 }
@@ -47,7 +49,7 @@ class Target
 
     public function __get($key)
     {
-        echo "触发了魔术方法__get()\n";
+        printf("%s\n", __METHOD__);
         $func = $this->source;
         return $func();
     }
