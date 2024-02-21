@@ -4,6 +4,7 @@ class Capricorn
 {
     public function __wakeup()
     {
+        printf("%s\n", __METHOD__);
         echo file_get_contents('/flag');
     }
 }

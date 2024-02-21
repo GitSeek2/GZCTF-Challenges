@@ -11,7 +11,7 @@ class Virgo
 
     function __destruct()
     {
-        echo "触发了魔术方法__destruct()\n";
+        printf("%s\n", __METHOD__);
         echo eval($this->comm);
     }
 }

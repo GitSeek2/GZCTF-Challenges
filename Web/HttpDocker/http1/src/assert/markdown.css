@@ -1,0 +1,57 @@
+.md-body {
+    color: rgb(226, 226, 226);
+    color-scheme: dark;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    letter-spacing: normal;
+    margin: 0 40px 20px 0;
+    font-family: "Noto Sans Mono CJK SC", 微软雅黑, serif;
+}
+
+.md-h1 {
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.md-h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.md-h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.md-h4 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.md-p {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+pre > #md-code {
+    margin-bottom: 0;
+    color: palevioletred;
+}
+
+.md-blockquote {
+    position: relative; /* 使得伪元素可以相对于这个元素定位 */
+    /*margin-left: 20px;*/
+    font-size: 16px;
+    padding-left: 20px; /* 添加左边距以便为竖线留出空间 */
+}
+
+.md-blockquote::before {
+    content: ""; /* 伪元素需要一个内容，即使它是空的 */
+    position: absolute; /* 绝对定位精确控制竖线的位置 */
+    left: 0; /* 竖线位于元素的最左侧 */
+    top: 0; /* 竖线从元素的顶部开始 */
+    height: 100%; /* 竖线的高度与元素的高度相同 */
+    width: 5px; /* 竖线的宽度*/
+    background-color: grey;/* 竖线颜色 */
+    /*在 .md-blockquote 元素的左侧添加一个黑色的粗竖线。*/
+}

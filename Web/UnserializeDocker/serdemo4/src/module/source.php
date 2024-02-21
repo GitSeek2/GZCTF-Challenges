@@ -16,6 +16,7 @@ class A
 
     public function cleanContents(array $contents)
     {
+        printf("%s\n", __METHOD__);
         $cachedProperties = array_flip([
             'path',
             'dirname',
@@ -38,18 +39,21 @@ class A
 
     public function getForStorage()
     {
+        printf("%s\n", __METHOD__);
         $cleaned = $this->cleanContents($this->cache);
         return json_encode([$cleaned, $this->complete]);
     }
 
     public function save()
     {
+        printf("%s\n", __METHOD__);
         $contents = $this->getForStorage();
         $this->store->set($this->key, $contents, $this->expire);
     }
 
     public function __destruct()
     {
+        printf("%s\n", __METHOD__);
         if (!$this->autosave) {
             $this->save();
         }
@@ -60,12 +64,14 @@ class B
 {
     protected function getExpireTime($expire): int
     {
+        printf("%s\n", __METHOD__);
         return (int)$expire;
     }
 
     public function getCacheKey(string $name): string
     {
         // 使缓存文件名随机
+        printf("%s\n", __METHOD__);
         $cache_filename = $this->options['prefix'] . uniqid() . $name;
         if (substr($cache_filename, -strlen('.php')) === '.php') {
             die('?');
@@ -75,6 +81,7 @@ class B
 
     protected function serialize($data): string
     {
+        printf("%s\n", __METHOD__);
         if (is_numeric($data)) {
             return (string)$data;
         }
@@ -86,6 +93,7 @@ class B
 
     public function set($name, $value, $expire = null): bool
     {
+        printf("%s\n", __METHOD__);
         $this->writeTimes++;
 
         if (is_null($expire)) {

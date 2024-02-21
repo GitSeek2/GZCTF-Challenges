@@ -13,7 +13,7 @@ class happy
 
     function __destruct()
     {
-        echo "触发了魔术方法__destruct()\n";
+        printf("%s\n", __METHOD__);
         if (!empty($this->file)) {
             if (strchr($this->file, "\\") === false && strchr($this->file, '/') === false) {
                 $filename = dirname(__FILE__) . '/' . $this->file;
@@ -24,13 +24,13 @@ class happy
 
     function __wakeup()
     {
-        echo "触发了魔术方法__wakeup()\n";
+        printf("%s\n", __METHOD__);
         $this->file = 'index.php';
     }
 
     public function __toString()
     {
-        echo "触发了魔术方法__toString()\n";
+        printf("%s\n", __METHOD__);
         return '';
     }
 }

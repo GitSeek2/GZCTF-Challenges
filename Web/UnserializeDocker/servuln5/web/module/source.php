@@ -11,14 +11,14 @@ class Leo
 
     function __destruct()
     {
-        echo "触发了魔术方法__destruct()\n";
+        printf("%s\n", __METHOD__);
         include_once($this->file);
         echo $flag;
     }
 
     function __wakeup()
     {
-        echo "触发了魔术方法__wakeup()\n";
+        printf("%s\n", __METHOD__);
         $this->file = 'index.php';
     }
 }
