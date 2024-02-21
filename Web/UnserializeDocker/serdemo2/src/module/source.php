@@ -11,7 +11,7 @@ class test1
 
     function __destruct()
     {
-        echo "触发了test1的魔术方法__destruct()\n";
+        printf("%s\n", __METHOD__);
         if (file_exists($this->varr)) {
             echo "文件" . $this->varr . "存在";
         }
@@ -31,13 +31,14 @@ class test2
 
     function __toString()
     {
+        printf("%s\n", __METHOD__);
         $this->obj->execute();
         return $this->varr;
     }
 
     function __destruct()
     {
-        echo "触发了test2的魔术方法__destruct()\n";
+        printf("%s\n", __METHOD__);
     }
 }
 
@@ -47,12 +48,13 @@ class test3
 
     function execute()
     {
+        printf("%s\n", __METHOD__);
         eval($this->varr);
     }
 
     function __destruct()
     {
-        echo "触发了test3的魔术方法__destruct()\n";
+        printf("%s\n", __METHOD__);
     }
 }
 

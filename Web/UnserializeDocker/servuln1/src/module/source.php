@@ -6,12 +6,13 @@ class Aries
 
     function execute()
     {
+        printf("%s\n", __METHOD__);
         eval($this->command);
     }
 
     function __wakeup()
     {
-        echo "触发了魔术方法__wakeup\n";
+        printf("%s\n", __METHOD__);
         $this->execute();
     }
 }
