@@ -15,7 +15,8 @@
 <div class="search-form mb-2 mt-5">
     <form id="searchForm">
         <div class="form-group">
-            <input type="text" class="form-control" id="searchInput" placeholder="Enter id to search, for example, 221103">
+            <input type="text" class="form-control" id="searchInput"
+                   placeholder="Enter id to search, for example, 221103">
         </div>
     </form>
 </div>
@@ -24,11 +25,16 @@
         <div class="col-sm-10">
             <div class="card">
                 <div class="row no-gutters">
-                    <?php
-                    error_reporting(0);
-                    include "search.php";
-                    echo getInfo();
-                    ?>
+                    <div class="col-md-7 p-5">
+                        <div class="card-body">
+                            <p class="text-white-50 mb-4 md-p">
+                                1
+                                <?php
+                                //                    include "search.php";
+                                ?>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

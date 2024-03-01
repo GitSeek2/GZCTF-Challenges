@@ -1,5 +1,8 @@
 # GZCTF-Challenges
 
+[English](https://github.com/GitSeek2/GZCTF-Challenges/blob/main/README.md)
+[简体中文](https://github.com/GitSeek2/GZCTF-Challenges/blob/main/README-zh.md)
+
 Dockerfile & Source Code for CSSEC::CTF challenge based GZ::CTF to build docker image🎉️🎉️🎉️
 
 In each category we use GZCTF's dynamic FLAG. If you don't want to use dynamic FLAG, please edit the `flag.sh` or `service.sh` file and
