@@ -1,2 +1,2 @@
 <?php
-system('chdir');
+echo file_get_contents('/flag');
