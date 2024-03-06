@@ -4,7 +4,6 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="../assert/style.css">
-    <link rel="stylesheet" type="text/css" href="progress3.css">
     <title>false.php</title>
 </head>
 

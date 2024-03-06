@@ -1,5 +1,8 @@
 # GZCTF-Challenges
 
+[English](https://github.com/GitSeek2/GZCTF-Challenges/blob/main/README.md)
+[简体中文](https://github.com/GitSeek2/GZCTF-Challenges/blob/main/README-zh.md)
+
 为基于GZ::CTF平台搭建的 CSSEC::CTF 比赛提供构建题目镜像的Dockerfile以及源码🎉️🎉️🎉️
 
 在每道题目中可以使用动态FLAG. 如果不想使用动态FLAG，需要修改`flag.sh` or `service.sh`中的对应代码。

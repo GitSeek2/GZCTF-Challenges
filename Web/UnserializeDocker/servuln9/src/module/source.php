@@ -15,7 +15,6 @@ class Sagittarius
     public function __invoke()
     {
         printf("%s\n", __METHOD__);
-        echo "触发了魔术方法__invoke()\n";
         $this->append($this->arrow);
     }
 }
