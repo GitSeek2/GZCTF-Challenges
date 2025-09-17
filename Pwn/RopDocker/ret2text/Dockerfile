@@ -3,9 +3,9 @@ FROM ubuntu:16.04
 RUN sed -i 's/archive.ubuntu.com/asia-east1.gce.archive.ubuntu.com/g' /etc/apt/sources.list && apt update && apt-get install -y lib32z1 xinetd && rm -rf /var/lib/apt/lists/ && rm -rf /root/.cache && apt-get autoclean && rm -rf /tmp/* /var/lib/apt/* /var/cache/* /var/log/*
 #apt update && apt-get install -y lib32z1 xinetd && rm -rf /var/lib/apt/lists/ && rm -rf /root/.cache && apt-get autoclean && rm -rf /tmp/* /var/lib/apt/* /var/cache/* /var/log/*
 
-COPY pwn.xinetd /etc/xinetd.d/pwn
+COPY ./pwn.xinetd /etc/xinetd.d/pwn
 
-COPY service.sh /service.sh
+COPY ./service.sh /service.sh
 
 RUN chmod +x /service.sh
 
@@ -14,7 +14,7 @@ RUN useradd -m ctf
 
 # copy bin
 COPY ./bin/ret2text /home/ctf/ret2text
-COPY sh /home/ctf/bin/sh
+COPY ./sh /home/ctf/bin/sh
 
 
 # chown & chmod

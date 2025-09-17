@@ -17,8 +17,7 @@ class Virgo
 }
 
 if (isset($_REQUEST['Virgo'])) {
-    $param = str_replace("%", "replaced", $_REQUEST['Virgo']);
-    unserialize($param);
+    unserialize($_REQUEST['Virgo']);
 } else {
     echo "系统检测发现该处漏洞，进行攻击测试\n";
 }
