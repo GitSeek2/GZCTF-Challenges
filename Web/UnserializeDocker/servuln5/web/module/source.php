@@ -1,5 +1,5 @@
 <?php
-//sercet in flag.php
+//secret in flag.php
 class Leo
 {
     var $file = 'index.php';

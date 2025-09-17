@@ -38,7 +38,7 @@ function getCheck()
     }
 
     if ($via !== null) {
-        if (strpos($via, '1.0 lutalica.time (Squid 3.1)') !== false) {
+        if (strpos($via, '1.0 lutalica.time(Squid/3.1)') !== false) {
             $ret .= '<p>Step 3 satisfied</p>';
             $flag += 1;
         } else {
